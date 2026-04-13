@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET Biology Test - Potentia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="biology-test.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h1 class="logo">Potentia</h1>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scholarship.html">Tests</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Facilities</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- Biology Test Header -->
+<section class="test-header biology-header">
+    <h1>NEET Biology - Practice Question Paper</h1>
+    <p>Botany & Zoology | 50 Questions | 200 Marks</p>
+</section>
+
+<!-- Instructions Section -->
+<section class="instructions-container">
+    <div class="instructions-box">
+        <h2>General Instructions</h2>
+        <ul>
+            <li>Each correct answer carries <strong>+4 marks</strong>. Each wrong answer carries <strong>-1 mark</strong>. Unattempted questions carry <strong>0 marks</strong>.</li>
+            <li>Only one option is correct for each question.</li>
+            <li>Section A - Botany: Questions 1-25 | Section B - Zoology: Questions 26-50</li>
+            <li>Once submitted, your answer cannot be changed.</li>
+            <li>Your final score will be calculated and stored.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Test Container -->
+<div class="test-container">
+    <!-- Progress Bar -->
+    <div class="progress-section">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+        <div class="progress-text">
+            <span id="currentQuestion">Question 1</span> of 50
+        </div>
+    </div>
+
+    <!-- Question Container -->
+    <div class="question-section" id="questionSection">
+        <!-- Questions will be dynamically loaded here -->
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="navigation-buttons">
+        <button id="prevBtn" class="nav-btn prev-btn" onclick="previousQuestion()">← Previous</button>
+        <button id="nextBtn" class="nav-btn next-btn" onclick="nextQuestion()">Next →</button>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="submit-section">
+        <button id="submitBtn" class="submit-btn" onclick="submitTest()">Submit Test</button>
+    </div>
+</div>
+
+<!-- Result Modal -->
+<div id="resultModal" class="result-modal">
+    <div class="result-modal-content">
+        <div class="result-header">
+            <h2>Test Submitted Successfully!</h2>
+        </div>
+        <div class="result-details">
+            <div class="result-item">
+                <span class="result-label">Total Questions:</span>
+                <span class="result-value" id="totalQuestionsResult">50</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Correct Answers:</span>
+                <span class="result-value correct" id="correctAnswersResult">0</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Wrong Answers:</span>
+                <span class="result-value wrong" id="wrongAnswersResult">0</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Unattempted:</span>
+                <span class="result-value unattempted" id="unattemptedResult">0</span>
+            </div>
+            <div class="result-item total-marks">
+                <span class="result-label">Total Marks:</span>
+                <span class="result-value" id="totalMarksResult">0</span>/200
+            </div>
+        </div>
+        <div class="result-buttons">
+            <button class="result-btn back-btn" onclick="goBackToTests()">Back to Tests</button>
+            <button class="result-btn home-btn" onclick="goHome()">Home</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Potentia Residential Coaching</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="biology-questions.js"></script>
+<script src="biology-test.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

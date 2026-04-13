@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potentia Residential Coaching</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h1 class="logo">Potentia</h1>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" onclick="openLoginModal(event)">Admin Login</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Potentia Residential Coaching</h1>
+        <p class="tagline">Away from all distractions</p>
+        <h3>Exclusively for NEET Aspirants!</h3>
+        <a href="scholarship.html">
+            <button class="scholar-btn">Apply for Scholarship Test</button>
+        </a>
+    </div>
+    <div class="hero-image">
+        <img src="images/frontBuilding.jpeg" alt="Coaching Building">
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+    <h2>Why Choose Us</h2>
+    <div class="feature-grid">
+        <div>Small Batches for personalised mentoring</div>
+        <div>One on one Doubt solving session</div>
+        <div>Round the clock Teacher support</div>
+        <div>Healthy and Hygienic Food</div>
+        <div>Gymnasium</div>
+        <div>Two/Three bedded rooms</div>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+        <button class="gallery-nav gallery-prev" onclick="scrollGallery(-1)">&#10094;</button>
+        <div class="gallery-wrapper">
+            <div class="gallery-grid" id="galleryGrid">
+                <img src="images/gallery/i1.jpg" onclick="openModal(this)">
+                <img src="images/gallery/i2.jpg" onclick="openModal(this)">
+                <img src="images/gallery/i8.jpg" onclick="openModal(this)">
+                <img src="images/gallery/i4.jpg" onclick="openModal(this)">
+                <img src="images/gallery/i5.jpg" onclick="openModal(this)">
+                <img src="images/gallery/i6.jpg" onclick="openModal(this)">
+                <img src="images/gallery/i7.jpg" onclick="openModal(this)">
+                <img src="images/gallery/i3.jpg" onclick="openModal(this)">
+                <img src="images/gallery/i9.jpg" onclick="openModal(this)">
+            </div>
+        </div>
+        <button class="gallery-nav gallery-next" onclick="scrollGallery(1)">&#10095;</button>
+    </div>
+</section>
+
+<!-- Admin Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content login-modal">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Admin Login</h2>
+        <form onsubmit="handleAdminLogin(event)">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="login-btn">Login</button>
+            <p id="loginError" class="error-msg"></p>
+        </form>
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<!-- Video Section -->
+<section class="video">
+    <h2>Student Success Stories - NEET 2024</h2>
+    <div class="video-container">
+        <button class="video-nav video-prev" onclick="scrollVideos(-1)">&#10094;</button>
+        <div class="video-wrapper">
+            <div class="video-grid" id="videoGrid">
+                <div class="video-card">
+                    <iframe src="https://youtube.com/shorts/hc2DVQEsg-g?feature=share" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="video-title">Ravi - AIR 45</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="video-title">Priya - AIR 12</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="video-title">Arjun - AIR 78</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="video-title">Shreya - AIR 28</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="video-title">Aditya - AIR 92</p>
+                </div>
+            </div>
+        </div>
+        <button class="video-nav video-next" onclick="scrollVideos(1)">&#10095;</button>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>Patkai Colony, Chumukedima</p>
+    <p>7005368195 / 7005651736 / 7005196036</p>
+    <p>Instagram: Potentia_Residential_Coaching</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Potentia Residential Coaching</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

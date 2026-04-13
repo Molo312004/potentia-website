@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET Physics Test - Potentia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="physics-test.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">Potentia</h1>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="scholarship.html">Tests</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Facilities</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- Physics Test Header -->
+    <section class="test-header">
+        <h1>NEET Physics - Practice Question Paper</h1>
+        <p>20 Questions | Max Marks: 80 | Duration: 60 minutes</p>
+    </section>
+
+    <!-- Instructions Section -->
+    <section class="instructions-container">
+        <div class="instructions-box">
+            <h2>General Instructions</h2>
+            <ul>
+                <li>Each correct answer carries <strong>+4 marks</strong>. Each wrong answer carries <strong>-1 mark</strong>. Unattempted questions carry <strong>0 marks</strong>.</li>
+                <li>Only one option is correct for each question.</li>
+                <li>You can navigate between questions using Previous/Next buttons or arrow keys.</li>
+                <li>Once submitted, your answer cannot be changed.</li>
+                <li>Your final score will be calculated and stored.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Test Container -->
+    <div class="test-container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-info">
+                <span>Question <span id="currentQuestion">1</span>/20</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Questions -->
+        <div id="questionSection"></div>
+
+        <!-- Navigation Buttons -->
+        <div class="button-container">
+            <button id="prevBtn" class="nav-btn" onclick="previousQuestion()">← Previous</button>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+            <button id="nextBtn" class="nav-btn" onclick="nextQuestion()">Next →</button>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="result-modal">
+        <div class="result-modal-content">
+            <div class="result-header">
+                <h2>Test Submitted Successfully!</h2>
+            </div>
+            <div class="result-details">
+                <div class="result-item">
+                    <span class="result-label">Total Questions:</span>
+                    <span class="result-value" id="totalQuestionsResult">20</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Correct Answers:</span>
+                    <span class="result-value correct" id="correctAnswersResult">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Wrong Answers:</span>
+                    <span class="result-value wrong" id="wrongAnswersResult">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Unattempted:</span>
+                    <span class="result-value unattempted" id="unattemptedResult">0</span>
+                </div>
+                <div class="result-item total-marks">
+                    <span class="result-label">Total Marks:</span>
+                    <span class="result-value" id="totalMarksResult">0</span>/80
+                </div>
+            </div>
+            <div class="result-buttons">
+                <button class="result-btn back-btn" onclick="closeResultModal()">Back to Tests</button>
+                <button class="result-btn home-btn" onclick="window.location.href='index.html'">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Potentia Residential Coaching</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <script src="physics-questions.js"></script>
+    <script src="physics-test.js"></script>
+</body>
+</html>

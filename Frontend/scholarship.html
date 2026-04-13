@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Test - Potentia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h1 class="logo">Potentia</h1>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- Registration Modal -->
+<div id="registrationModal" class="registration-modal">
+    <div class="registration-modal-content">
+        <h2>Register for Scholarship Test</h2>
+        <p>Please provide your details to proceed with the scholarship test</p>
+        <form id="registrationForm" class="registration-form">
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number (10 digits) *</label>
+                <input type="text" id="phone" name="phone" required placeholder="Enter 10-digit phone number" maxlength="10">
+            </div>
+            <div class="form-group">
+                <label for="school">Name of School *</label>
+                <input type="text" id="school" name="school" required placeholder="Enter your school name">
+            </div>
+            <button type="submit" class="register-btn">Register & Continue</button>
+        </form>
+    </div>
+</div>
+
+<!-- Scholarship Header -->
+<section class="scholarship-hero">
+    <h1>NEET Scholarship Test</h1>
+    <p>Test your knowledge across Physics, Chemistry, and Biology</p>
+</section>
+
+<!-- Subject Sections -->
+<section class="subjects">
+    <!-- Physics Section -->
+    <div class="subject-card physics">
+        <div class="subject-header physics-header">
+            <h2>PHYSICS</h2>
+            <span class="questions-count">Questions: 20</span>
+        </div>
+        <div class="subject-content">
+            <div class="subject-info">
+                <p class="marks"><strong>Max Marks:</strong> 80</p>
+                <p class="duration"><strong>Duration:</strong> 60 min</p>
+            </div>
+            <ul class="topics">
+                <li>Mechanics & Motion</li>
+                <li>Heat & Thermodynamics</li>
+                <li>Waves & Oscillations</li>
+                <li>Electromagnetism</li>
+                <li>Modern Physics</li>
+            </ul>
+            <button class="take-test-btn physics-btn">Take Physics Test</button>
+        </div>
+    </div>
+
+    <!-- Chemistry Section -->
+    <div class="subject-card chemistry">
+        <div class="subject-header chemistry-header">
+            <h2>CHEMISTRY</h2>
+            <span class="questions-count">Questions: 20</span>
+        </div>
+        <div class="subject-content">
+            <div class="subject-info">
+                <p class="marks"><strong>Max Marks:</strong> 80</p>
+                <p class="duration"><strong>Duration:</strong> 60 min</p>
+            </div>
+            <ul class="topics">
+                <li>Inorganic Chemistry</li>
+                <li>Organic Chemistry</li>
+                <li>Physical Chemistry</li>
+                <li>Periodic Table</li>
+                <li>Nomenclature & Bonding</li>
+            </ul>
+            <button class="take-test-btn chemistry-btn">Take Chemistry Test</button>
+        </div>
+    </div>
+
+    <!-- Biology Section -->
+    <div class="subject-card biology">
+        <div class="subject-header biology-header">
+            <h2>BIOLOGY</h2>
+            <span class="questions-count">Questions: 50</span>
+        </div>
+        <div class="subject-content">
+            <div class="subject-info">
+                <p class="marks"><strong>Max Marks:</strong> 200</p>
+                <p class="duration"><strong>Duration:</strong> 60 min</p>
+            </div>
+            <ul class="topics">
+                <li>Botany & Zoology</li>
+                <li>Cell Biology</li>
+                <li>Genetics & Evolution</li>
+                <li>Human Physiology</li>
+                <li>Ecology & Environment</li>
+            </ul>
+            <button class="take-test-btn biology-btn">Take Biology Test</button>
+        </div>
+    </div>
+</section>
+
+<!-- All Tests Completed Banner -->
+<div id="allTestsCompletedBanner" style="display:none;">
+    <div class="completion-banner">
+        <div class="completion-icon">&#10003;</div>
+        <h2>Assessment Complete</h2>
+        <p>Thank you for completing all three sections of the Potentia Scholarship Test. Your performance has been recorded and our team will carefully review your results. We will reach out to you at the earliest with further details.</p>
+        <p class="completion-sub">We appreciate your dedication and wish you the very best.</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Potentia Residential Coaching</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+potentia08@gmail.com
+potentia1234
+
+
+Admin Details
+
+
+INSERT INTO admins (username, password, email, created_at, active) 
+VALUES (
+    'molo',
+    '$2a$12$XwOv0HE7onK82fo21Xm45edXSKd4ltuUadxhpTjUvX2KcYHTZNUeu',
+    'molo312004@gmail.com',
+    NOW(),
+    true
+);
+
+Insert a record
+
+INSERT INTO registrations (email, full_name, phone, registration_time, school)
+VALUES ('molo123@gmail.com', 'Molo Molier', '9876543210', NOW(), 'Holy Cross Hr Sec School');

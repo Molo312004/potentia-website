@@ -1,0 +1,5 @@
+# Environment files - never commit these
+Backend/.env
+
+# VS Code settings (contains local paths)
+.vscode/
